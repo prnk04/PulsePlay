@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "expo_musicplayerapp",
+    "slug": "expo_musicplayerapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.prnkpandey.expoMusicPlayerApp",
+      "UIBackgroundModes": [
+        "audio"
+      ]
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.prnkpandey.expoMusicPlayerApp"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "9781b4fe-1559-4f64-8b93-67c63f7f091a"
+      }
+    }
+  }
+}

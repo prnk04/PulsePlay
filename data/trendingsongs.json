@@ -1,0 +1,74 @@
+{
+    "trendingSongs": [
+        {
+            "id" : 0,
+            "song" : "Calm Down",
+            "artist" : "Rema & Selena Gomez",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        },
+        {
+            "id" : 1,
+            "song" : "Flowers",
+            "artist" : "Miley Cyrus",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        },
+        {
+            "id" : 2,
+            "song" : "Believer",
+            "artist" : "Imagine Dragons",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        },
+        {
+            "id" : 3,
+            "song" : "Cupid",
+            "artist" : "FIFTY FIFTY",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        },
+        {
+            "id" : 4,
+            "song" : "Desperado",
+            "artist" : "Raghav & Teshar",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        },
+        {
+            "id" : 5,
+            "song" : "Bones",
+            "artist" : "Imagine Dragons",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        },
+        {
+            "id" : 6,
+            "song" : "Dance The Night",
+            "artist" : "Dua Lipa",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        },
+        {
+            "id" : 7,
+            "song" : "Perfect",
+            "artist" : "Ed Sheeran",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        },
+        {
+            "id" : 8,
+            "song" : "Lover (Remix) [feat. Shwan Mendes]",
+            "artist" : "Taylor Swift feat. Shwan Mendes",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        },
+        {
+            "id" : 9,
+            "song" : "Love Me Like You Do",
+            "artist" : "Elle Goulding",
+            "addedToPlaylist": false,
+            "isPlaying": false
+        }
+    ]
+}

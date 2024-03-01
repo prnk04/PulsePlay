@@ -1,0 +1,1340 @@
+{
+    "categories": [
+        {
+            "type": "Mood",
+            "categories": [
+                {
+                    "name": "Happy",
+                    "songs": [
+                        {
+                          "id": 146661,
+                          "duration": 121,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/17/09-17-55-729_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/17/audio_ae4d57086a.mp3",
+                          "artist": "Nver",
+                          "title": "Futuristic Beat"
+                        },
+                        {
+                          "id": 115949,
+                          "duration": 241,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/29/14-31-39-160_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/07/30/audio_cb437bacae.mp3",
+                          "artist": "Sergii",
+                          "title": "Summer Adventures"
+                        },
+                        {
+                          "id": 132333,
+                          "duration": 76,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/01/06/10-39-24-970_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/01/06/audio_d74b2d0ff4.mp3",
+                          "artist": "Roman",
+                          "title": "A Small Miracle"
+                        },
+                        {
+                          "id": 115571,
+                          "duration": 118,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/02/20/13-18-40-936_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/07/25/audio_3266b47d61.mp3",
+                          "artist": "Gvidon",
+                          "title": "Guitar Electro Sport Trailer"
+                        },
+                        {
+                          "id": 15700,
+                          "duration": 177,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/06/06-57-42-712_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/26/audio_d0c6ff1bdd.mp3",
+                          "artist": "Vitaliy",
+                          "title": "The Cradle of Your Soul"
+                        },
+                        {
+                          "id": 12278,
+                          "duration": 179,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/12/16/audio_e13e329328.mp3",
+                          "artist": "Jonas",
+                          "title": "Embrace"
+                        },
+                        {
+                          "id": 162760,
+                          "duration": 129,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/08/18/07-22-33-620_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/08/18/audio_7cc4d951e0.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Inside You"
+                        },
+                        {
+                          "id": 9834,
+                          "duration": 91,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/10/25/audio_47edc456e3.mp3",
+                          "artist": "Zakhar",
+                          "title": "Simple Piano Melody"
+                        },
+                        {
+                          "id": 113985,
+                          "duration": 170,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/06/27/12-00-45-604_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/06/27/audio_d1eeb72cda.mp3",
+                          "artist": "Stockaudios",
+                          "title": "Happy Day"
+                        },
+                        {
+                          "id": 186300,
+                          "duration": 102,
+                          "artwork": "https://cdn.pixabay.com/audio/2024/01/15/16-53-32-146_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2024/01/15/audio_583634a7f0.mp3",
+                          "artist": "Sergio",
+                          "title": "Joyful Whistle"
+                        },
+                        {
+                          "id": 148320,
+                          "duration": 108,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/30/12-30-33-725_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/30/audio_6b3a512606.mp3",
+                          "artist": "Sergio",
+                          "title": "Happy Day (Background, Vlog Music)"
+                        },
+                        {
+                          "id": 117676,
+                          "duration": 88,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/08/20/audio_55aa207a92.mp3",
+                          "artist": "Yrii",
+                          "title": "Catch It"
+                        },
+                        {
+                          "id": 122614,
+                          "duration": 144,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/12/10-43-43-53_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/12/audio_2eca99b967.mp3",
+                          "artist": "Music",
+                          "title": "Happy Acoustic Guitar Background Music"
+                        },
+                        {
+                          "id": 120336,
+                          "duration": 82,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/09/18/16-52-08-594_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/09/18/audio_5658d27863.mp3",
+                          "artist": "29811401",
+                          "title": "Playing In Color"
+                        },
+                        {
+                          "id": 112188,
+                          "duration": 109,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/05/27/23-53-29-958_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/27/audio_ed655fa73a.mp3",
+                          "artist": "FASSounds",
+                          "title": "Fun Life"
+                        },
+                        {
+                          "id": 146604,
+                          "duration": 26,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/16/23-30-48-194_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/16/audio_23995babec.mp3",
+                          "artist": "Oleg",
+                          "title": "Upbeat Happy Logo (2 Versions)"
+                        },
+                        {
+                          "id": 112842,
+                          "duration": 155,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/06/07/11-06-53-258_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/06/07/audio_ec7b7deb99.mp3",
+                          "artist": "Music",
+                          "title": "Tropical Summer Music"
+                        },
+                        {
+                          "id": 112194,
+                          "duration": 128,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/05/27/23-46-21-714_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/27/audio_5b08ce8e20.mp3",
+                          "artist": "FASSounds",
+                          "title": "Best Time"
+                        },
+                        {
+                          "id": 15549,
+                          "duration": 148,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/24/audio_bd97b05fb4.mp3",
+                          "artist": "Sergei",
+                          "title": "Life of a Wandering Wizard"
+                        },
+                        {
+                          "id": 108600,
+                          "duration": 138,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/06/07-10-26-54_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/03/30/audio_8b461a79b4.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Sunshine"
+                        }
+                      ]
+                      
+                },
+                {
+                    "name": "Sad",
+                    "songs": [
+                        {
+                          "id": 116199,
+                          "duration": 189,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/08/02/19-23-38-897_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/08/02/audio_884fe92c21.mp3",
+                          "artist": "Aleksey",
+                          "title": "Inspiring Cinematic Ambient"
+                        },
+                        {
+                          "id": 136824,
+                          "duration": 180,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/01/31/09-58-23-591_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/01/27/audio_e649bbdf58.mp3",
+                          "artist": "Yevhen",
+                          "title": "Awaken"
+                        },
+                        {
+                          "id": 9835,
+                          "duration": 273,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/10/25/audio_05570f2464.mp3",
+                          "artist": "Zakhar",
+                          "title": "Piano Moment"
+                        },
+                        {
+                          "id": 149473,
+                          "duration": 144,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/11/05-09-32-203_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/05/11/audio_5198c12188.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Leva - Eternity"
+                        },
+                        {
+                          "id": 11120,
+                          "duration": 91,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/23/audio_035a943c87.mp3",
+                          "artist": "AleXZavesa",
+                          "title": "Cinematic Dramatic"
+                        },
+                        {
+                          "id": 185196,
+                          "duration": 139,
+                          "artwork": "https://cdn.pixabay.com/audio/2024/01/10/15-04-26-897_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2024/01/10/audio_e1d20b0759.mp3",
+                          "artist": "William_King",
+                          "title": "Separation"
+                        },
+                        {
+                          "id": 10149,
+                          "duration": 161,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/01/audio_67c5757bac.mp3",
+                          "artist": "Jonas",
+                          "title": "WatR - Fluid"
+                        },
+                        {
+                          "id": 5688,
+                          "duration": 112,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/07/26/audio_c8102c4eae.mp3",
+                          "artist": "Oleksii",
+                          "title": "Emotional Piano Sad Background Music For Videos"
+                        },
+                        {
+                          "id": 185750,
+                          "duration": 116,
+                          "artwork": "https://cdn.pixabay.com/audio/2024/01/13/11-09-58-91_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2024/01/13/audio_640c5ca4a9.mp3",
+                          "artist": "AlexGrohl",
+                          "title": "Sad Soul (Chasing a Feeling)"
+                        },
+                        {
+                          "id": 14023,
+                          "duration": 212,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/11/audio_b21d9d6fa6.mp3",
+                          "artist": "Sergei",
+                          "title": "Moment"
+                        },
+                        {
+                          "id": 10450,
+                          "duration": 262,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/09/01/08-10-48-631_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/07/audio_35719208a2.mp3",
+                          "artist": "Leonell",
+                          "title": "Leonell Cassio - The Sapphire City"
+                        },
+                        {
+                          "id": 110416,
+                          "duration": 132,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/04/30/audio_3c7238ff32.mp3",
+                          "artist": "Leonid",
+                          "title": "Loneliness of the Winner"
+                        },
+                        {
+                          "id": 112785,
+                          "duration": 312,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/06/06/08-02-34-724_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/06/06/audio_e9200f1a0c.mp3",
+                          "artist": "Juan",
+                          "title": "For When It Rains"
+                        },
+                        {
+                          "id": 111679,
+                          "duration": 144,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/05/07-47-36-409_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/19/audio_f501280699.mp3",
+                          "artist": "Ashot",
+                          "title": "Tense Sad Piano"
+                        },
+                        {
+                          "id": 118015,
+                          "duration": 154,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/08/23/21-41-59-69_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/08/23/audio_23da5d387d.mp3",
+                          "artist": "Aleksey",
+                          "title": "Spirit Landscape"
+                        },
+                        {
+                          "id": 124488,
+                          "duration": 159,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/30/17-22-44-578_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/30/audio_fbd14dd8bc.mp3",
+                          "artist": "Oleg",
+                          "title": "Sad Moment / Sad and Melancholy Piano Background Music"
+                        },
+                        {
+                          "id": 150146,
+                          "duration": 116,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/05/16/audio_0636f970ca.mp3",
+                          "artist": "Oleg",
+                          "title": "Sad Violin"
+                        },
+                        {
+                          "id": 7573,
+                          "duration": 116,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/08/20/audio_65d34dc7a6.mp3",
+                          "artist": "Oleksii",
+                          "title": "Sad Piano - Background Music For Videos"
+                        },
+                        {
+                          "id": 186758,
+                          "duration": 34,
+                          "artwork": "https://cdn.pixabay.com/audio/2024/01/18/06-43-09-183_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2024/01/18/audio_92521624c3.mp3",
+                          "artist": "Grand_Project",
+                          "title": "Emotional Cinematic_34sec"
+                        },
+                        {
+                          "id": 7425,
+                          "duration": 214,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/08/16/audio_fa075ac0fa.mp3",
+                          "artist": "Zakhar",
+                          "title": "Beyond the Time ( Main)"
+                        }
+                      ]
+                      
+                },
+                {
+                    "name": "Love",
+                    "songs": [
+                        {
+                          "id": 9835,
+                          "duration": 273,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/10/25/audio_05570f2464.mp3",
+                          "artist": "Zakhar",
+                          "title": "Piano Moment"
+                        },
+                        {
+                          "id": 149473,
+                          "duration": 144,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/11/05-09-32-203_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/05/11/audio_5198c12188.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Leva - Eternity"
+                        },
+                        {
+                          "id": 8697,
+                          "duration": 127,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/09/25/audio_153f263349.mp3",
+                          "artist": "Zakhar",
+                          "title": "Cinematic Fairy Tale Story (Main)"
+                        },
+                        {
+                          "id": 132333,
+                          "duration": 76,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/01/06/10-39-24-970_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/01/06/audio_d74b2d0ff4.mp3",
+                          "artist": "Roman",
+                          "title": "A Small Miracle"
+                        },
+                        {
+                          "id": 112623,
+                          "duration": 158,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/06/03/audio_c3d218496a.mp3",
+                          "artist": "Oleg",
+                          "title": "Inspiring Emotional Uplifting Piano"
+                        },
+                        {
+                          "id": 12278,
+                          "duration": 179,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/12/16/audio_e13e329328.mp3",
+                          "artist": "Jonas",
+                          "title": "Embrace"
+                        },
+                        {
+                          "id": 11120,
+                          "duration": 91,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/23/audio_035a943c87.mp3",
+                          "artist": "AleXZavesa",
+                          "title": "Cinematic Dramatic"
+                        },
+                        {
+                          "id": 185196,
+                          "duration": 139,
+                          "artwork": "https://cdn.pixabay.com/audio/2024/01/10/15-04-26-897_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2024/01/10/audio_e1d20b0759.mp3",
+                          "artist": "William_King",
+                          "title": "Separation"
+                        },
+                        {
+                          "id": 152722,
+                          "duration": 197,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/06/06/audio_cbcfcb18e6.mp3",
+                          "artist": "Olexy",
+                          "title": "Summer Walk"
+                        },
+                        {
+                          "id": 12279,
+                          "duration": 133,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3",
+                          "artist": "Jonas",
+                          "title": "Let It Go"
+                        },
+                        {
+                          "id": 115973,
+                          "duration": 264,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/29/14-29-17-343_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/07/30/audio_14f618bbd4.mp3",
+                          "artist": "Sergii",
+                          "title": "Field Grass"
+                        },
+                        {
+                          "id": 144998,
+                          "duration": 109,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/03/14-44-18-281_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/03/audio_6700efb297.mp3",
+                          "artist": "William_King",
+                          "title": "Ambient Classical Guitar"
+                        },
+                        {
+                          "id": 133764,
+                          "duration": 146,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/01/15/23-35-30-9_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/01/16/audio_0664325262.mp3",
+                          "artist": "Keyframe",
+                          "title": "Sexy Chillout Hip Hop Track - Come With Me"
+                        },
+                        {
+                          "id": 122614,
+                          "duration": 144,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/12/10-43-43-53_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/12/audio_2eca99b967.mp3",
+                          "artist": "Music",
+                          "title": "Happy Acoustic Guitar Background Music"
+                        },
+                        {
+                          "id": 116955,
+                          "duration": 188,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/08/10/18-47-10-227_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/08/10/audio_2014b63921.mp3",
+                          "artist": "Aleksey",
+                          "title": "Inspirational Sentimental Romantic"
+                        },
+                        {
+                          "id": 121570,
+                          "duration": 160,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/02/09-06-35-178_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/02/audio_c216ad4a20.mp3",
+                          "artist": "Music",
+                          "title": "Summer Nights (Tropical House Music)"
+                        },
+                        {
+                          "id": 127577,
+                          "duration": 129,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/11/30/05-07-30-453_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/11/30/audio_567ef6dbed.mp3",
+                          "artist": "Alexi",
+                          "title": "Good Vibes"
+                        },
+                        {
+                          "id": 188266,
+                          "duration": 193,
+                          "artwork": "https://cdn.pixabay.com/audio/2024/01/26/13-50-53-618_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2024/01/26/audio_1de03eb065.mp3",
+                          "artist": "Sergio",
+                          "title": "Loves Serenade (Valentine’s day)"
+                        },
+                        {
+                          "id": 108602,
+                          "duration": 134,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/06/09-54-34-389_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/03/30/audio_52a596f0b5.mp3",
+                          "artist": "Vitaliy",
+                          "title": "You Can Do More!"
+                        },
+                        {
+                          "id": 110055,
+                          "duration": 70,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/04/25/audio_629d834db7.mp3",
+                          "artist": "Oleg",
+                          "title": "Wedding love Story"
+                        }
+                      ]
+                },
+                {
+                    "name": "Relaxing",
+                    "songs": [
+                        {
+                          "id": 11157,
+                          "duration": 160,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/23/audio_64b2dd1bce.mp3",
+                          "artist": "Oleksii",
+                          "title": "Just Relax"
+                        },
+                        {
+                          "id": 125566,
+                          "duration": 175,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/11/11/audio_84306ee149.mp3",
+                          "artist": "Oleksii",
+                          "title": "Please Calm My Mind"
+                        },
+                        {
+                          "id": 112191,
+                          "duration": 147,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/05/27/23-51-43-941_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3",
+                          "artist": "FASSounds",
+                          "title": "Lofi Study"
+                        },
+                        {
+                          "id": 145038,
+                          "duration": 72,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/03/audio_047543feac.mp3",
+                          "artist": "Oleg",
+                          "title": "Relaxing"
+                        },
+                        {
+                          "id": 131746,
+                          "duration": 140,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/04/11-36-38-58_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/01/01/audio_816821e627.mp3",
+                          "artist": "Ashot",
+                          "title": "Relaxed Vlog (Night Street)"
+                        },
+                        {
+                          "id": 9835,
+                          "duration": 273,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/10/25/audio_05570f2464.mp3",
+                          "artist": "Zakhar",
+                          "title": "Piano Moment"
+                        },
+                        {
+                          "id": 110624,
+                          "duration": 138,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/05/audio_1395e7800f.mp3",
+                          "artist": "Oleksii",
+                          "title": "Forest Lullaby"
+                        },
+                        {
+                          "id": 168895,
+                          "duration": 132,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/09/29/audio_0eaceb1002.mp3",
+                          "artist": "Pumpupthemind",
+                          "title": "Once In Paris"
+                        },
+                        {
+                          "id": 122841,
+                          "duration": 173,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/14/audio_9939f792cb.mp3",
+                          "artist": "Olexy",
+                          "title": "The Beat of Nature"
+                        },
+                        {
+                          "id": 15700,
+                          "duration": 177,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/06/06-57-42-712_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/26/audio_d0c6ff1bdd.mp3",
+                          "artist": "Vitaliy",
+                          "title": "The Cradle of Your Soul"
+                        },
+                        {
+                          "id": 15013,
+                          "duration": 233,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/18/audio_ea75bab6d8.mp3",
+                          "artist": "Olexy",
+                          "title": "Morning Garden - Acoustic Chill"
+                        },
+                        {
+                          "id": 110241,
+                          "duration": 181,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/04/27/audio_30ff2fdf22.mp3",
+                          "artist": "Oleksii",
+                          "title": "Sedative"
+                        },
+                        {
+                          "id": 122592,
+                          "duration": 208,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/12/09-28-04-865_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/12/audio_061cead49a.mp3",
+                          "artist": "DayFox",
+                          "title": "Weeknds"
+                        },
+                        {
+                          "id": 8037,
+                          "duration": 237,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/09/06/audio_14fb3b6893.mp3",
+                          "artist": "17406877",
+                          "title": "Battle Of The Dragons"
+                        },
+                        {
+                          "id": 8697,
+                          "duration": 127,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/09/25/audio_153f263349.mp3",
+                          "artist": "Zakhar",
+                          "title": "Cinematic Fairy Tale Story (Main)"
+                        },
+                        {
+                          "id": 144998,
+                          "duration": 109,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/03/14-44-18-281_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/03/audio_6700efb297.mp3",
+                          "artist": "William_King",
+                          "title": "Ambient Classical Guitar"
+                        },
+                        {
+                          "id": 14023,
+                          "duration": 212,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/11/audio_b21d9d6fa6.mp3",
+                          "artist": "Sergei",
+                          "title": "Moment"
+                        },
+                        {
+                          "id": 147979,
+                          "duration": 224,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/29/06-36-55-462_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/27/audio_d6ce814591.mp3",
+                          "artist": "Sergii",
+                          "title": "Reflected Light"
+                        },
+                        {
+                          "id": 12641,
+                          "duration": 66,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/09/21/03-40-41-971_200x200.jpeg",
+                          "url": "https://cdn.pixabay.com/audio/2021/12/22/audio_9da2a60074.mp3",
+                          "artist": "Oleksandr",
+                          "title": "penguinmusic - Modern Chillout (Future Calm)"
+                        },
+                        {
+                          "id": 116330,
+                          "duration": 133,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/08/03/audio_54ca0ffa52.mp3",
+                          "artist": "Yrii",
+                          "title": "Milk Shake"
+                        }
+                      ]
+                }
+            ]
+        },
+        {
+            "type": "Genre",
+            "categories":[
+                {
+                    "name": "Electronic",
+                    "songs": [
+                        {
+                          "id": 136788,
+                          "duration": 72,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/01/27/10-02-46-157_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/01/27/audio_3d61eda8c6.mp3",
+                          "artist": "StudioKolomna",
+                          "title": "Risk"
+                        },
+                        {
+                          "id": 12099,
+                          "duration": 88,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/12/13/audio_b9c0dc9e48.mp3",
+                          "artist": "Yrii",
+                          "title": "Chill Abstract (Intention)"
+                        },
+                        {
+                          "id": 15045,
+                          "duration": 110,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/13/11-20-13-185_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/18/audio_d0a13f69d2.mp3",
+                          "artist": "AlexGrohl",
+                          "title": "Electronic Rock (King Around Here)"
+                        },
+                        {
+                          "id": 11176,
+                          "duration": 91,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/24/audio_c3dfe250e3.mp3",
+                          "artist": "Yrii",
+                          "title": "Sexy Fashion Beats (Simulate)"
+                        },
+                        {
+                          "id": 121791,
+                          "duration": 73,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/05/02-12-02-660_200x200.jpeg",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/05/audio_686ddcce85.mp3",
+                          "artist": "Oleksandr",
+                          "title": "Powerful Beat"
+                        },
+                        {
+                          "id": 173062,
+                          "duration": 109,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/10/24/15-08-22-671_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/10/24/audio_9408f7326a.mp3",
+                          "artist": "Rockot",
+                          "title": "Drive Breakbeat"
+                        },
+                        {
+                          "id": 137766,
+                          "duration": 165,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/02/03/audio_534a89f910.mp3",
+                          "artist": "Oleksii",
+                          "title": "Easy Lifestyle"
+                        },
+                        {
+                          "id": 147979,
+                          "duration": 224,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/29/06-36-55-462_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/27/audio_d6ce814591.mp3",
+                          "artist": "Sergii",
+                          "title": "Reflected Light"
+                        },
+                        {
+                          "id": 123276,
+                          "duration": 145,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/18/12-55-08-891_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/18/audio_31c2730e64.mp3",
+                          "artist": "Evgeny",
+                          "title": "Password Infinity"
+                        },
+                        {
+                          "id": 118766,
+                          "duration": 221,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/08/31/19-48-37-847_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/08/31/audio_419263fc12.mp3",
+                          "artist": "Leonell",
+                          "title": "Leonell Cassio - The Blackest Bouquet"
+                        },
+                        {
+                          "id": 12327,
+                          "duration": 119,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/12/17/audio_93d90514a5.mp3",
+                          "artist": "Yrii",
+                          "title": "This Minimal Technology (Pure)"
+                        },
+                        {
+                          "id": 147152,
+                          "duration": 147,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/24/09-30-22-297_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/21/audio_8579ca297f.mp3",
+                          "artist": "Peter",
+                          "title": "My Universe"
+                        },
+                        {
+                          "id": 184234,
+                          "duration": 129,
+                          "artwork": "https://cdn.pixabay.com/audio/2024/01/04/12-02-02-463_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2024/01/04/audio_896a3bc8f7.mp3",
+                          "artist": "AlexGrohl",
+                          "title": "Mellow Future Bass (Bounce On it)"
+                        },
+                        {
+                          "id": 114909,
+                          "duration": 240,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/07/14/10-30-11-397_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/07/14/audio_b2e1adaa25.mp3",
+                          "artist": "Leonell",
+                          "title": "Leonell Cassio - Chapter Two (ft. Carrie)"
+                        },
+                        {
+                          "id": 163081,
+                          "duration": 125,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/08/22/09-24-09-858_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/08/21/audio_802aa722fc.mp3",
+                          "artist": "Nver",
+                          "title": "Deep Future Garage (Royalty Free Music)"
+                        },
+                        {
+                          "id": 18565,
+                          "duration": 154,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/02/10/audio_fc48af67b2.mp3",
+                          "artist": "Anton",
+                          "title": "Slow Trap"
+                        },
+                        {
+                          "id": 12641,
+                          "duration": 66,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/09/21/03-40-41-971_200x200.jpeg",
+                          "url": "https://cdn.pixabay.com/audio/2021/12/22/audio_9da2a60074.mp3",
+                          "artist": "Oleksandr",
+                          "title": "penguinmusic - Modern Chillout (Future Calm)"
+                        },
+                        {
+                          "id": 166385,
+                          "duration": 273,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/09/13/11-48-25-137_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/09/13/audio_ee2221f74c.mp3",
+                          "artist": "Sergii",
+                          "title": "A Long Way"
+                        },
+                        {
+                          "id": 117997,
+                          "duration": 126,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/08/23/audio_d16737dc28.mp3",
+                          "artist": "QubeSounds",
+                          "title": "Electronic Future Beats"
+                        },
+                        {
+                          "id": 15241,
+                          "duration": 66,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/14/17-44-23-399_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/20/audio_743615ade2.mp3",
+                          "artist": "Evgeny",
+                          "title": "Everything Feels New"
+                        }
+                      ]
+                      
+                },
+                {
+                    "name": "Jazz",
+                    "songs": [
+                        {
+                          "id": 164472,
+                          "duration": 120,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/08/31/14-35-42-339_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/08/31/audio_d2149da47a.mp3",
+                          "artist": "Paolo",
+                          "title": "The Best Jazz Club In New Orleans"
+                        },
+                        {
+                          "id": 122592,
+                          "duration": 208,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/12/09-28-04-865_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/12/audio_061cead49a.mp3",
+                          "artist": "DayFox",
+                          "title": "Weeknds"
+                        },
+                        {
+                          "id": 14023,
+                          "duration": 212,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/11/audio_b21d9d6fa6.mp3",
+                          "artist": "Sergei",
+                          "title": "Moment"
+                        },
+                        {
+                          "id": 12279,
+                          "duration": 133,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3",
+                          "artist": "Jonas",
+                          "title": "Let It Go"
+                        },
+                        {
+                          "id": 11254,
+                          "duration": 85,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/25/audio_91b32e02f9.mp3",
+                          "artist": "Yrii",
+                          "title": "Jazzy Abstract Beat"
+                        },
+                        {
+                          "id": 117676,
+                          "duration": 88,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/08/20/audio_55aa207a92.mp3",
+                          "artist": "Yrii",
+                          "title": "Catch It"
+                        },
+                        {
+                          "id": 9503,
+                          "duration": 148,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/10/16/audio_3eed2e4658.mp3",
+                          "artist": "23843807",
+                          "title": "Sunset Vibes (Lo-Fi/Chillhop)"
+                        },
+                        {
+                          "id": 110855,
+                          "duration": 83,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/09/audio_ed8daf312e.mp3",
+                          "artist": "Oleg",
+                          "title": "Jazz Happy"
+                        },
+                        {
+                          "id": 110481,
+                          "duration": 77,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/02/audio_3641d5f7d1.mp3",
+                          "artist": "Oleg",
+                          "title": "A Jazz Piano"
+                        },
+                        {
+                          "id": 110485,
+                          "duration": 105,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/02/audio_c5aa284009.mp3",
+                          "artist": "Oleg",
+                          "title": "Swing"
+                        },
+                        {
+                          "id": 10900,
+                          "duration": 47,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/18/audio_d702fb7672.mp3",
+                          "artist": "Oleksii",
+                          "title": "Elevator Music bossa nova background music  ( Version 60s)"
+                        },
+                        {
+                          "id": 142911,
+                          "duration": 104,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/03/17/08-55-19-297_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/03/17/audio_555bd9964f.mp3",
+                          "artist": "William_King",
+                          "title": "French Jazz Music"
+                        },
+                        {
+                          "id": 10039,
+                          "duration": 201,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/10/29/audio_99ed1626ee.mp3",
+                          "artist": "Oleksandr",
+                          "title": "Night Jazz Beats"
+                        },
+                        {
+                          "id": 20925,
+                          "duration": 160,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/02/15/audio_69aaf4e6d1.mp3",
+                          "artist": "Sergei",
+                          "title": "Spy Jazz"
+                        },
+                        {
+                          "id": 187368,
+                          "duration": 99,
+                          "artwork": "https://cdn.pixabay.com/audio/2024/01/21/18-33-27-908_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2024/01/21/audio_c8f18a2e32.mp3",
+                          "artist": "Grand_Project",
+                          "title": "Lo-Fi Midnight Hip Hop_Medium"
+                        },
+                        {
+                          "id": 130483,
+                          "duration": 229,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/12/21/20-25-12-581_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/12/22/audio_d1d04f3bea.mp3",
+                          "artist": "Grand_Project",
+                          "title": "Sensual Jazz"
+                        },
+                        {
+                          "id": 112190,
+                          "duration": 122,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/05/27/23-55-04-811_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/27/audio_f492694c94.mp3",
+                          "artist": "FASSounds",
+                          "title": "Jazz Cafe"
+                        },
+                        {
+                          "id": 127185,
+                          "duration": 122,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/19/09-36-20-866_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/11/26/audio_0052d925c3.mp3",
+                          "artist": "Yevhen",
+                          "title": "Comedy Detective"
+                        },
+                        {
+                          "id": 111372,
+                          "duration": 95,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/16/audio_e4ef32b05a.mp3",
+                          "artist": "Oleg",
+                          "title": "Night Jazz"
+                        },
+                        {
+                          "id": 2641,
+                          "duration": 128,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/03/16-54-29-157_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2021/02/06/audio_909a0c5006.mp3",
+                          "artist": "Julius",
+                          "title": "Cool Jazz Loops"
+                        }
+                      ]
+                },
+                {
+                    "name": "Indie Pop",
+                    "songs": [
+                        {
+                          "id": 152722,
+                          "duration": 197,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/06/06/audio_cbcfcb18e6.mp3",
+                          "artist": "Olexy",
+                          "title": "Summer Walk"
+                        },
+                        {
+                          "id": 149473,
+                          "duration": 144,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/11/05-09-32-203_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/05/11/audio_5198c12188.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Leva - Eternity"
+                        },
+                        {
+                          "id": 115949,
+                          "duration": 241,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/29/14-31-39-160_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/07/30/audio_cb437bacae.mp3",
+                          "artist": "Sergii",
+                          "title": "Summer Adventures"
+                        },
+                        {
+                          "id": 149262,
+                          "duration": 159,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/05/09/audio_3dc71287de.mp3",
+                          "artist": "Marko",
+                          "title": "A call to the soul"
+                        },
+                        {
+                          "id": 162760,
+                          "duration": 129,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/08/18/07-22-33-620_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/08/18/audio_7cc4d951e0.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Inside You"
+                        },
+                        {
+                          "id": 115977,
+                          "duration": 299,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/29/14-28-47-55_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/07/30/audio_0fea22d728.mp3",
+                          "artist": "Sergii",
+                          "title": "Smooth Waters"
+                        },
+                        {
+                          "id": 110241,
+                          "duration": 181,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/04/27/audio_30ff2fdf22.mp3",
+                          "artist": "Oleksii",
+                          "title": "Sedative"
+                        },
+                        {
+                          "id": 5720,
+                          "duration": 140,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/07/27/audio_6623aaf984.mp3",
+                          "artist": "Oleksii",
+                          "title": "Chilled Acoustic Indie Folk Instrumental Background Music For Videos"
+                        },
+                        {
+                          "id": 165132,
+                          "duration": 82,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/09/05/04-52-39-720_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/09/05/audio_60a44b1cde.mp3",
+                          "artist": "Sergio",
+                          "title": "Happy Rock"
+                        },
+                        {
+                          "id": 122614,
+                          "duration": 144,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/12/10-43-43-53_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/12/audio_2eca99b967.mp3",
+                          "artist": "Music",
+                          "title": "Happy Acoustic Guitar Background Music"
+                        },
+                        {
+                          "id": 108600,
+                          "duration": 138,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/06/07-10-26-54_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/03/30/audio_8b461a79b4.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Sunshine"
+                        },
+                        {
+                          "id": 124550,
+                          "duration": 120,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/10/31/11-32-14-583_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/31/audio_80d88ba642.mp3",
+                          "artist": "Roman",
+                          "title": "Positive Way"
+                        },
+                        {
+                          "id": 11290,
+                          "duration": 105,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/26/audio_e20882e29d.mp3",
+                          "artist": "Yrii",
+                          "title": "Acoustic Motivation"
+                        },
+                        {
+                          "id": 175139,
+                          "duration": 96,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/11/07/10-15-34-603_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/11/07/audio_43ee593a19.mp3",
+                          "artist": "Sergio",
+                          "title": "Sunshine Whistle"
+                        },
+                        {
+                          "id": 7669,
+                          "duration": 126,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/07/10-47-57-494_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2021/08/25/audio_d81f13f540.mp3",
+                          "artist": "VItalii",
+                          "title": "Good Vibe"
+                        },
+                        {
+                          "id": 140896,
+                          "duration": 127,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/02/28/09-42-56-707_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/02/28/audio_6cacf0bae3.mp3",
+                          "artist": "Roman",
+                          "title": "Only Forward"
+                        },
+                        {
+                          "id": 176565,
+                          "duration": 102,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/11/16/11-15-59-94_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/11/16/audio_5422728366.mp3",
+                          "artist": "Sergio",
+                          "title": "Sunrise Groove"
+                        },
+                        {
+                          "id": 133219,
+                          "duration": 152,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/01/13/06-35-51-108_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/01/13/audio_e1efc6ce50.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Spring Upbeat"
+                        },
+                        {
+                          "id": 108602,
+                          "duration": 134,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/06/09-54-34-389_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/03/30/audio_52a596f0b5.mp3",
+                          "artist": "Vitaliy",
+                          "title": "You Can Do More!"
+                        },
+                        {
+                          "id": 108601,
+                          "duration": 131,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/06/07-11-10-926_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/03/30/audio_a068e13c10.mp3",
+                          "artist": "Vitaliy",
+                          "title": "To Meet The Light"
+                        }
+                      ]
+                      
+                },
+                {
+                    "name": "Acoustic",
+                    "songs": [
+                        {
+                          "id": 122841,
+                          "duration": 173,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/10/14/audio_9939f792cb.mp3",
+                          "artist": "Olexy",
+                          "title": "The Beat of Nature"
+                        },
+                        {
+                          "id": 110624,
+                          "duration": 138,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/05/05/audio_1395e7800f.mp3",
+                          "artist": "Oleksii",
+                          "title": "Forest Lullaby"
+                        },
+                        {
+                          "id": 15045,
+                          "duration": 110,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/13/11-20-13-185_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/18/audio_d0a13f69d2.mp3",
+                          "artist": "AlexGrohl",
+                          "title": "Electronic Rock (King Around Here)"
+                        },
+                        {
+                          "id": 15013,
+                          "duration": 233,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/18/audio_ea75bab6d8.mp3",
+                          "artist": "Olexy",
+                          "title": "Morning Garden - Acoustic Chill"
+                        },
+                        {
+                          "id": 11157,
+                          "duration": 160,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/11/23/audio_64b2dd1bce.mp3",
+                          "artist": "Oleksii",
+                          "title": "Just Relax"
+                        },
+                        {
+                          "id": 149473,
+                          "duration": 144,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/11/05-09-32-203_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/05/11/audio_5198c12188.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Leva - Eternity"
+                        },
+                        {
+                          "id": 110241,
+                          "duration": 181,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2022/04/27/audio_30ff2fdf22.mp3",
+                          "artist": "Oleksii",
+                          "title": "Sedative"
+                        },
+                        {
+                          "id": 132333,
+                          "duration": 76,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/01/06/10-39-24-970_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/01/06/audio_d74b2d0ff4.mp3",
+                          "artist": "Roman",
+                          "title": "A Small Miracle"
+                        },
+                        {
+                          "id": 15700,
+                          "duration": 177,
+                          "artwork": "https://cdn.pixabay.com/audio/2022/04/06/06-57-42-712_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2022/01/26/audio_d0c6ff1bdd.mp3",
+                          "artist": "Vitaliy",
+                          "title": "The Cradle of Your Soul"
+                        },
+                        {
+                          "id": 149262,
+                          "duration": 159,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/05/09/audio_3dc71287de.mp3",
+                          "artist": "Marko",
+                          "title": "A call to the soul"
+                        },
+                        {
+                          "id": 162760,
+                          "duration": 129,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/08/18/07-22-33-620_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/08/18/audio_7cc4d951e0.mp3",
+                          "artist": "Vitaliy",
+                          "title": "Inside You"
+                        },
+                        {
+                          "id": 142569,
+                          "duration": 128,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/03/14/audio_676747013a.mp3",
+                          "artist": "orangery",
+                          "title": "Coniferous forest"
+                        },
+                        {
+                          "id": 115977,
+                          "duration": 299,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/29/14-28-47-55_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/07/30/audio_0fea22d728.mp3",
+                          "artist": "Sergii",
+                          "title": "Smooth Waters"
+                        },
+                        {
+                          "id": 152722,
+                          "duration": 197,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2023/06/06/audio_cbcfcb18e6.mp3",
+                          "artist": "Olexy",
+                          "title": "Summer Walk"
+                        },
+                        {
+                          "id": 144998,
+                          "duration": 109,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/04/03/14-44-18-281_200x200.png",
+                          "url": "https://cdn.pixabay.com/audio/2023/04/03/audio_6700efb297.mp3",
+                          "artist": "William_King",
+                          "title": "Ambient Classical Guitar"
+                        },
+                        {
+                          "id": 6670,
+                          "duration": 118,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/08/08/audio_6eb9c39740.mp3",
+                          "artist": "Zakhar",
+                          "title": "My Life (Main)"
+                        },
+                        {
+                          "id": 5718,
+                          "duration": 119,
+                          "artwork": "",
+                          "url": "https://cdn.pixabay.com/audio/2021/07/27/audio_202082aa0b.mp3",
+                          "artist": "Oleksii",
+                          "title": "In the Forest - Ambient Acoustic Guitar Instrumental Background Music For Videos"
+                        },
+                        {
+                          "id": 115973,
+                          "duration": 264,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/05/29/14-29-17-343_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2022/07/30/audio_14f618bbd4.mp3",
+                          "artist": "Sergii",
+                          "title": "Field Grass"
+                        },
+                        {
+                          "id": 133764,
+                          "duration": 146,
+                          "artwork": "https://cdn.pixabay.com/audio/2023/01/15/23-35-30-9_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2023/01/16/audio_0664325262.mp3",
+                          "artist": "Keyframe",
+                          "title": "Sexy Chillout Hip Hop Track - Come With Me"
+                        },
+                        {
+                          "id": 185196,
+                          "duration": 139,
+                          "artwork": "https://cdn.pixabay.com/audio/2024/01/10/15-04-26-897_200x200.jpg",
+                          "url": "https://cdn.pixabay.com/audio/2024/01/10/audio_e1d20b0759.mp3",
+                          "artist": "William_King",
+                          "title": "Separation"
+                        }
+                      ]
+                      
+                }
+            ]
+        }
+       
+    ]
+}
