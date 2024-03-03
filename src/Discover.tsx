@@ -1,18 +1,12 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
-import { Alert, Dimensions, FlatList, Image, Modal, Pressable, SafeAreaView, ScrollView, SectionList, StyleSheet, Text, TextInput, Touchable, TouchableHighlight, TouchableOpacity, View } from "react-native";
-import Icon from 'react-native-vector-icons/Ionicons';
-import * as listOfTrendingSongs from '../data/trendingsongs.json'
-import { useSelector, useDispatch } from 'react-redux'
-import { spotifyLogin } from '../services/spotifyRequests';
-
-import * as allSongs from '../data/allSongs.json'
+import React, { } from 'react';
+import { Dimensions, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useSelector } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import SongPlayingComponent from './SongPlayingComponent';
+
 import { RootState } from '../reduxStore/store';
-
-
-
+import * as allSongs from '../data/allSongs.json'
+import SongPlayingComponent from './SongPlayingComponent';
 
 const Discover = () => {
 
@@ -40,7 +34,7 @@ const Discover = () => {
                                     flexWrap: "wrap",
                                     paddingVertical: "2%"
                                 }}
-                                key={'View2_' + categoryName}
+                                    key={'View2_' + categoryName}
                                 >
                                     {
                                         a.categories.map(
@@ -49,23 +43,20 @@ const Discover = () => {
                                                     <View style={{
                                                         paddingVertical: "2%"
                                                     }}
-                                                    key={'View1_' + b.name}
+                                                        key={'View1_' + b.name}
                                                     >
                                                         <Pressable onPress={() => {
                                                             navigation.navigate('TrackLists', { category: b.name, tracks: b.songs })
                                                         }}
-                                                        key={'Pressable1_' + b.name}>
+                                                            key={'Pressable1_' + b.name}>
                                                             <View key={'View_' + b.name} style={{
                                                                 width: Dimensions.get("screen").width * 0.4,
-                                                                // backgroundColor: "#0474A4",
-                                                                // backgroundColor: "rgba(0,0,0,0.3)",
                                                                 backgroundColor: "rgba(255,255,255,0.1)",
                                                                 paddingVertical: "10%",
                                                                 alignContent: "center",
                                                                 alignItems: "center",
                                                                 justifyContent: "center"
                                                             }}
-                                                            
                                                             >
                                                                 <Text key={'Text' + b.name}
                                                                     style={DiscoverStyle.categoryTextStyle}
@@ -97,7 +88,6 @@ const Discover = () => {
             <ScrollView style={{
                 flex: 1
             }}>
-
 
                 {/* Header view */}
                 <View style={{
@@ -131,8 +121,6 @@ const Discover = () => {
                 {/* View for Categories */}
                 <RenderCategories />
 
-
-
             </ScrollView>
             {/* Footer view */}
             <View style={{
@@ -145,8 +133,6 @@ const Discover = () => {
                         null
                 }
             </View>
-
-
 
         </SafeAreaView>
     )

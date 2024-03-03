@@ -1,0 +1,16 @@
+current directory: /Users/priyankapandey/Documents/myReactNativeProjects/pulseplay/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+/Users/priyankapandey/.rbenv/versions/2.7.6/bin/ruby -I /Users/priyankapandey/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20240301-99343-1y9rvxp.rb extconf.rb
+creating Makefile
+
+current directory: /Users/priyankapandey/Documents/myReactNativeProjects/pulseplay/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make "DESTDIR=" clean
+
+current directory: /Users/priyankapandey/Documents/myReactNativeProjects/pulseplay/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make "DESTDIR="
+compiling nkf.c
+linking shared-object nkf.bundle
+ld: warning: -multiply_defined is obsolete
+
+current directory: /Users/priyankapandey/Documents/myReactNativeProjects/pulseplay/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20240301-99343-1dzujgz

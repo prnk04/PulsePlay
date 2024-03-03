@@ -1,16 +1,14 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { Dimensions, FlatList, Image, Pressable, SafeAreaView, StyleSheet, Text, TouchableHighlight, View } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
-
-import TrackPlayer, { State } from 'react-native-track-player';
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import SongPlayingComponent from "./SongPlayingComponent";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../reduxStore/store";
 
-import * as allSongs from '../data/allSongs.json'
-import { addMultipleSongsToPlaylist, addSingleSongToPlaylist, getIdsOfSongsInPlaylistWithId, getNumSongsInPlaylistWithId } from "../reduxStore/playlistsSlice";
+import { RootState } from "../reduxStore/store";
+import { addMultipleSongsToPlaylist, getIdsOfSongsInPlaylistWithId } from "../reduxStore/playlistsSlice";
+import SongPlayingComponent from "./SongPlayingComponent";
+import * as allSongs from '../data/allSongs.json';
 
 
 
@@ -18,34 +16,30 @@ const TrackListWithEdit = (props: any) => {
 
     const navigation = useNavigation<NativeStackNavigationProp<any>>();
 
-
-    const [currSongInfo, setCurrSongInfo] = useState({})
-
-    const [selectedSongs, setSelectedSongs] = useState(new Array());
-
-    const [selectedSongsId, setSelectedSongsId] = useState(new Array());
-
-    const [, updateState] = React.useState({});
-    const forceUpdate = React.useCallback(() => updateState({}), []);
-
-    const [categoryName, setCategoryName] = useState('');
-    const [allSongsForThisCategory, setAllSongsForThisCategory] = useState(new Array());
-    const currentSongState = useSelector((state: RootState) => state.currSong.currentSongState)
-    const [thisPlaylistId, setThisPlaylistId] = useState('')
-
-    const [allSongsData, setAllSongsData] = useState(new Array());
     const dispatch = useDispatch();
 
+    const [selectedSongsId, setSelectedSongsId] = useState(new Array());
+    const [, updateState] = React.useState({});
+    const forceUpdate = React.useCallback(() => updateState({}), []);
+    const [categoryName, setCategoryName] = useState('');
+    const [allSongsForThisCategory, setAllSongsForThisCategory] = useState(new Array());
+    const [thisPlaylistId, setThisPlaylistId] = useState('')
+
+    const currentSongState = useSelector((state: RootState) => state.currSong.currentSongState)
     const allSongsId = useSelector(getIdsOfSongsInPlaylistWithId(props?.route?.params?.playlistId))
 
-    
+
     const selectThisSong = (songData: any) => {
         let prevSelection = new Array();
         prevSelection = selectedSongsId;
-        if (prevSelection.indexOf(songData.id) != -1) {
-            prevSelection.splice(prevSelection.indexOf(songData.id), 1)
+        let updatedSongData = songData
+        updatedSongData.album = categoryName
+        
+        if (prevSelection.indexOf(updatedSongData.id) != -1) {
+            
+            prevSelection.splice(prevSelection.indexOf(updatedSongData.id), 1)
         } else {
-            prevSelection.push(songData.id)
+            prevSelection.push(updatedSongData.id)
         }
 
         setSelectedSongsId(prevSelection)
@@ -53,36 +47,12 @@ const TrackListWithEdit = (props: any) => {
     }
 
     const RenderFlatList = (item: any) => {
-        // console.log("item: ", item)
         return (
             <View style={{
                 paddingHorizontal: "5%",
                 paddingVertical: "2%"
             }}>
-
-
-
                 <TouchableHighlight
-                    // onPress={() => {
-                    //     try {
-                    //         console.log("I am trying to move");
-                    //         setCurrSongInfo(item.item)
-                    //         setShowBanner(true)
-                    //         // navigation.navigate("SongInfo", {songInfo: item.item})
-                    //         navigation.navigate(
-                    //             "SongInfo", {
-                    //             "category": categoryName,
-                    //             "tracks": allSongsForThisCategory,
-                    //             "songInfo": item.item,
-                    //             index: item.index
-                    //         }
-                    //         )
-                    //     } catch (error) {
-                    //         console.log("Move failed: ", error)
-                    //     }
-
-                    // }}
-
                     onPress={() => {
                         selectThisSong(item.item)
                     }}
@@ -90,9 +60,7 @@ const TrackListWithEdit = (props: any) => {
                     <View style={{
                         paddingVertical: "2%",
                         paddingHorizontal: "1%",
-                        // backgroundColor: "#0000005D",
                         borderRadius: 5,
-                        // height: Dimensions.get("screen").height * 0.1
                     }}>
                         <View style={{
                             flexDirection: "row",
@@ -124,44 +92,22 @@ const TrackListWithEdit = (props: any) => {
                                 </View>
 
                                 <View>
-                                    {/* {
-                                        (selectedSongsId.indexOf(item.item.id) != -1) 
-                                        ?
-                                        <Icon name="checkmark-circle-outline" size={Dimensions.get("screen").width * 0.08} color="#FFFFFF5D" />
-                                        :
-                                        <Icon name="ellipse-outline" size={Dimensions.get("screen").width * 0.08} color="#FFFFFF5D" />
-                                    } */}
-
                                     <Icon
                                         name={(selectedSongsId.indexOf(item.item.id) != -1) ? "checkmark-circle-outline" : "ellipse-outline"}
                                         size={Dimensions.get("screen").width * 0.08} color="#FFFFFF5D" />
-
                                 </View>
-
                             </View>
-
                         </View>
                     </View>
                 </TouchableHighlight>
-
             </View>
         )
-
     }
 
-
-
-
     useLayoutEffect(() => {
-
-        console.log("props are: ", props?.route?.params)
-
         let catName = props?.route?.params?.playlistName
-        
-
         setCategoryName(catName);
         setThisPlaylistId(props?.route?.params?.playlistId)
-        console.log("songs already in this playlist: ", allSongsId)
 
         let tempArray = new Array();
 
@@ -173,7 +119,7 @@ const TrackListWithEdit = (props: any) => {
                             (c) => {
                                 if (tempArray.find((item) => { return item.id == c.id }) || allSongsId.includes(c.id)) {
 
-                                } else 
+                                } else
                                     tempArray.push(c)
                             }
                         )
@@ -183,7 +129,7 @@ const TrackListWithEdit = (props: any) => {
         )
         setAllSongsForThisCategory(tempArray)
 
-    }, [navigation])
+    }, [props?.route?.params?.playlistName, props?.route?.params?.playlistId])
 
 
     const addSongsToPlaylist = () => {
@@ -195,17 +141,12 @@ const TrackListWithEdit = (props: any) => {
             }
         )
 
-        if (selectedSongsId.length == 0) {
-
-
-        }
-        else {
+        if (selectedSongsId.length != 0) {
             dispatch(addMultipleSongsToPlaylist({
                 playlistName: categoryName,
                 playlistId: thisPlaylistId,
                 songInfo: allSongsInfo
             }))
-
         }
 
         navigation.goBack();
@@ -240,14 +181,6 @@ const TrackListWithEdit = (props: any) => {
                         </Pressable>
 
                         <View>
-                            {/* <Text style={{
-                            color: "#FFFFFF7D",
-                            fontFamily: "NotoSans-Bold",
-                            fontWeight: "500",
-                            fontSize: 30,
-                            textAlignVertical: "center",
-                            lineHeight: 35,
-                        }}>{categoryName}</Text> */}
                         </View>
                         <View>
                             <TouchableHighlight onPress={addSongsToPlaylist}>
@@ -268,103 +201,6 @@ const TrackListWithEdit = (props: any) => {
                     />
 
                 </View>
-
-
-                {/* <View style={{
-                flex: -1,
-                // backgroundColor: "pink",
-                borderTopLeftRadius: 20,
-                borderTopRightRadius: 20,
-                display: (showBanner) ? "flex" : "none"
-
-            }}>
-                <View style={{
-                    paddingVertical: "5%",
-                    // padding: "2%",
-                    width: Dimensions.get("screen").width * 0.9,
-                    alignSelf:"center"
-
-
-                }}>
-                    <Pressable style={{
-                    }}
-                        onPress={() => navigation.navigate("SongInfo", { songInfo: currSongInfo })}
-                    >
-                        <View style={{
-                            flexDirection: "row",
-                            justifyContent: "space-between",
-                            alignItems: "center"
-                        }}>
-
-                            <View style={{
-                                
-                            }}>
-                                <Image source={(currSongInfo.artwork == "" || currSongInfo.artwork == null) ?
-                                    { uri: 'https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_1280.png' } : { uri: currSongInfo.artwork }}
-                                    style={{
-                                        height: Dimensions.get("screen").width * 0.1,
-                                        aspectRatio: 1,
-                                        borderRadius: Dimensions.get("screen").width * 0.1 * 0.5
-                                    }} />
-
-                            </View>
-
-                            <View style={{
-                                // flex: 4
-                                width: Dimensions.get("screen").width * 0.4,
-                                // alignItems: "center",
-                                paddingLeft: "3%"
-                            }}>
-
-                                <Text style={{
-                                    color: "#FFFFFF7D",
-                                    fontFamily: "NotoSans-Bold",
-                                    fontWeight: "500",
-                                    fontSize: 20,
-                                    textAlignVertical: "center",
-                                    lineHeight: 25,
-
-                                }}>{currSongInfo.title}</Text>
-                                <Text style={{
-                                    color: "#FFFFFF7D",
-                                    fontFamily: "NotoSans-Medium",
-                                    fontWeight: "500",
-                                    fontSize: 12,
-                                    textAlignVertical: "center",
-                                    lineHeight: 15,
-
-                                }}>{currSongInfo.artist}</Text>
-
-
-
-                            </View>
-
-                            <View style={{
-                                // flex: 2
-                                width: Dimensions.get("screen").width * 0.3
-                            }}>
-
-                                <View style={{
-                                    justifyContent: "space-evenly",
-                                    flexDirection: "row"
-                                }}>
-
-                                    <Icon name="pause" size={30} color="#FFFFFF5D" />
-                                    <Icon name="play-skip-forward" size={30} color="#FFFFFF5D" />
-
-                                </View>
-
-                            </View>
-
-                        </View>
-
-                    </Pressable>
-
-                </View>
-
-            </View> */}
-
-
 
                 {
                     (currentSongState) ?

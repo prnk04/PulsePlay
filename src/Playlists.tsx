@@ -1,8 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import React, { useEffect, useState } from 'react';
-import { Alert, Dimensions, FlatList, Image, Modal, Pressable, SafeAreaView, Text, TextInput, TouchableHighlight, View } from 'react-native';
-
+import React, { useState } from 'react';
+import { Alert, Dimensions, FlatList, Modal, Pressable, SafeAreaView, Text, TextInput, TouchableHighlight, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -12,44 +11,33 @@ import SongPlayingComponent from './SongPlayingComponent';
 
 const Playlists = () => {
 
+    const navigation = useNavigation<NativeStackNavigationProp<any>>();
+
     const [newPlaylistName, setNewPlaylistName] = React.useState('')
     const [userPlaylistsExist, setUsersPlayListsExist] = React.useState(true)
     const [showPromptToCreateNewPlaylist, setShowPromptToCreateNewPlaylist] = useState(false)
     const [showRedBorder, setShowRedBorder] = useState(false)
-
-    const currentSongState = useSelector((state: RootState) => state.currSong.currentSongState)
-
-
-    const navigation = useNavigation<NativeStackNavigationProp<any>>();
-    const dispatch = useDispatch();
-
-    const [, updateState] = React.useState({});
-
-    const storedPlaylists = useSelector((state: RootState) => state.playlistsStored.playlistMetaData.playlistsData)
-    const numStoredPlaylists = useSelector((state: RootState) => state.playlistsStored.playlistMetaData.numPlaylists)
-
-
     const [showModalToRemovePlaylist, setShowModalToRemovePlaylist] = useState(false)
     const [playlistToDelete, setPlaylistToDelete] = useState<any>({})
 
+    const dispatch = useDispatch();
+
+    const currentSongState = useSelector((state: RootState) => state.currSong.currentSongState)
+    const storedPlaylists = useSelector((state: RootState) => state.playlistsStored.playlistMetaData.playlistsData)
 
     const AddNewPlaylist = () => {
         return (
             <View style={{
                 flexDirection: "row",
-                // justifyContent: "space-around",
                 paddingHorizontal: "2%",
                 paddingBottom: "5%",
                 paddingTop: "2%",
-
                 alignItems: "center",
                 justifyContent: "center"
-
             }}>
                 <View style={{
                     justifyContent: "space-between",
                     flexDirection: "row",
-
                     paddingLeft: "2%",
                     width: Dimensions.get("screen").width * 0.9
                 }}>
@@ -69,9 +57,6 @@ const Playlists = () => {
                             placeholder='Playlist name...'
                             placeholderTextColor="#FFFFFF7D"
                             autoFocus={true}
-                        // onFocus = {() => setShowRedBorder(false)}
-
-
                         />
 
                     </View>
@@ -79,7 +64,6 @@ const Playlists = () => {
                         flexDirection: "row",
                         justifyContent: "space-between",
                         width: Dimensions.get("screen").width * 0.2
-
                     }}>
                         <Pressable onPress={() => createPlaylist(newPlaylistName)}>
                             <Icon name="checkmark-outline" size={35} color="#FFFFFF" />
@@ -94,10 +78,6 @@ const Playlists = () => {
     }
 
     const createPlaylist = (playlistName: string) => {
-        // let existingPlaylists = playListData;
-
-        let lastIndex = storedPlaylists.length
-
         let existingPlaylistNames = new Array();
         storedPlaylists.map(
             (a) => existingPlaylistNames.push(a.name.trim().toLowerCase())
@@ -179,7 +159,6 @@ const Playlists = () => {
                                     }}>
                                         <Text style={{
                                             fontFamily: "NotoSans-Medium",
-                                            // fontWeight: "200",
                                             lineHeight: 20,
                                             fontSize: 12,
                                             color: "#FFFFFF8D"

@@ -1,117 +1,163 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useEffect, useLayoutEffect, useState } from 'react';
-import { Alert, Dimensions, Image, Modal, Pressable, SafeAreaView, Text, TouchableHighlight, View } from 'react-native';
+import React, { useLayoutEffect, useState } from 'react';
+import { Alert, Dimensions, Image, Modal, Pressable, SafeAreaView, Text, TouchableHighlight, View, TextInput } from 'react-native';
 import TrackPlayer, { State, useProgress } from 'react-native-track-player';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../reduxStore/store';
-import { updateCurrentSongInfo } from '../reduxStore/currentSongSlice';
-import { playNextSong, playPreviousSong, playThisSong } from '../services/SongsManipulation';
-import { addSingleSongToPlaylist, addToSystemPlaylist, createNewPlaylist } from '../reduxStore/playlistsSlice';
-import { TextInput } from 'react-native';
 import Slider from '@react-native-community/slider';
 
+import { RootState } from '../reduxStore/store';
+import { updateCurrentPlaylistInfo, updateCurrentSongInfo } from '../reduxStore/currentSongSlice';
+import { addSingleSongToPlaylist, addToSystemPlaylist, createNewPlaylist } from '../reduxStore/playlistsSlice';
 
 
-
-const SongInfo = (props: any) => {
-
-    const currentSongState = useSelector((state: RootState) => state.currSong.currentSongState)
-    const artworkURL = useSelector((state: RootState) => state.currSong.currSongInfo?.artworkURL)
-    const songName = useSelector((state: RootState) => state.currSong.currSongInfo?.songName)
-    const artistName = useSelector((state: RootState) => state.currSong.currSongInfo?.artistName)
-    const songId = useSelector((state: RootState) => state.currSong.currSongInfo?.id)
-    const songURL = useSelector((state: RootState) => state.currSong.currSongInfo?.url)
-
-    const currSongInfo = useSelector((state: RootState) => state.currSong.currSongInfo)
+const SongInfo = () => {
 
     const navigation = useNavigation();
+
     const dispatch = useDispatch();
 
-    const currentPlaylistName = useSelector((state: RootState) => state.currSong.currentPlaylistName)
     const [showModalToAddSongToPlaylist, setShowModalToAddSongToPlaylist] = useState(false);
     const [playlistNameToBeAddedTo, setPlaylistNameToBeAddedTo] = useState('')
     const [showRedBorder, setShowRedBorder] = useState(false)
     const [showIcons, setShowIcons] = useState(false)
 
+    const currentSongState = useSelector((state: RootState) => state.currSong.currentSongState)
+    const artworkURL = useSelector((state: RootState) => state.currSong.currSongInfo?.artwork)
+    const songName = useSelector((state: RootState) => state.currSong.currSongInfo?.title)
+    const artistName = useSelector((state: RootState) => state.currSong.currSongInfo?.artist)
+    const songId = useSelector((state: RootState) => state.currSong.currSongInfo?.id)
+    const songURL = useSelector((state: RootState) => state.currSong.currSongInfo?.url)
+    const currSongInfo = useSelector((state: RootState) => state.currSong.currSongInfo)
+    const currentPlaylistName = useSelector((state: RootState) => state.currSong.currentPlaylistName)
     const allPlaylists = useSelector((state: RootState) => state.playlistsStored.playlistMetaData.playlistsData)
+
+    const prevPlaylistInfo = useSelector((state: RootState) => state.currSong.currPlaylistInfo?.songs)
+    const prevSongIndex = useSelector((state: RootState) => state.currSong.currPlaylistInfo?.currPlayingSongIndex)
+    const prevPlaylistName = useSelector((state: RootState) => state.currSong?.currPlaylistInfo?.name)
+    const prevPlayedSongState = useSelector((state: RootState) => state.currSong?.currentSongState)
+
+    const [iconName, setIconName] = useState('pause')
 
     const progress = useProgress();
 
+    useLayoutEffect(() => {
+        if (prevPlayedSongState == State.Playing || prevPlayedSongState == State.Buffering || prevPlayedSongState == State.Loading || prevPlayedSongState == State.Loading) {
+            setIconName('pause')
+        } else if (prevPlayedSongState == State.Ended || prevPlayedSongState == State.Paused || prevPlayedSongState == State.Stopped) {
+            setIconName('play')
+        }
 
-    const setUpTrackPlayer = async () => {
+    }, [prevPlayedSongState])
+
+    // const updateData = async (event: PlaybackActiveTrackChangedEvent) => {
+
+    //     let nowState = await TrackPlayer.getPlaybackState()
+
+    //     dispatch(updateCurrentSongInfo({
+    //         artist: event?.track?.artist,
+    //         artwork: event?.track?.artwork,
+    //         title: event?.track?.title,
+    //         id: event?.track?.id,
+    //         playbackState: nowState.state,
+    //         url: event?.track?.url
+    //     }))
+
+    //     dispatch(updateCurrentPlaylistInfo({
+    //         playlistName: prevPlaylistName,
+    //         songs: prevPlaylistInfo,
+    //         currSongIndex: event?.index
+    //     }))
+
+    //     dispatch(addToSystemPlaylist({ songInfo: event?.track }))
+    // }
+
+    // useEffect(() => {
+    //     TrackPlayer.addEventListener(Event.PlaybackActiveTrackChanged, (event) => {
+    //         updateData(event)
+    //     })
+    // })
+
+
+    const playOrPauseSong = async () => {
         try {
 
-            // await TrackPlayer.setupPlayer()
-            await TrackPlayer.add(currSongInfo);
-        } catch (error) {
+            let playbackState = await TrackPlayer.getPlaybackState();
 
-        }
-    }
-
-    useEffect(() => {
-        setUpTrackPlayer();
-    })
-
-
-    const playOrPauseSong = () => {
-        let currSongId = currSongInfo.id;
-
-        try {
-            if (songId == currSongId && currentSongState == "play") {
-
-                dispatch(updateCurrentSongInfo({
-                    artistName: artistName,
-                    artworkURL: artworkURL,
-                    songName: songName,
-                    id: songId,
-                    songState: "pause",
-                    url: songURL
-                }))
-            }
-            else {
-                dispatch(updateCurrentSongInfo({
-                    artistName: artistName,
-                    artworkURL: artworkURL,
-                    songName: songName,
-                    id: songId,
-                    songState: "play",
-                    url: songURL
-                }))
+            if (playbackState.state == State.Playing) {
+                await TrackPlayer.pause();
             }
 
-            playThisSong(songURL, artworkURL, artistName, songName, [], 0, currentPlaylistName, currentPlaylistName);
+            else if (playbackState.state == State.Paused) {
+                await TrackPlayer.play();
+            }
+
+            // let nowState = await TrackPlayer.getPlaybackState()
+            // let thisTrackInfo = await TrackPlayer.getActiveTrack()
+
+            // if ((nowState.state == State.None || nowState.state == State.Paused || nowState.state == State.Stopped || nowState.state == State.Error)
+            // ) {
+            //     setIconName('play')
+            // } else {
+            //     setIconName('pause')
+            // }
+
+            // dispatch(updateCurrentSongInfo({
+            //     artist: thisTrackInfo?.artist,
+            //     artwork: thisTrackInfo?.artwork,
+            //     title: thisTrackInfo?.title,
+            //     id: songId,
+            //     url: thisTrackInfo?.url,
+            //     playbackState: nowState.state
+            // }))
+
+            // dispatch(addToSystemPlaylist({ songInfo: thisTrackInfo }))
 
         } catch (error) {
-            console.log("error: ", error)
+            console.log("There was an error while playing or pausing this song on Song Info: ", error)
+
         }
+
     }
 
     const skipNext = async () => {
+        try {
+            let songsAlreadyInQueue = await TrackPlayer.getQueue();
+            let currSongPos = await TrackPlayer.getActiveTrackIndex();
 
-        let songsAlreadyInQueue = await TrackPlayer.getQueue();
+            let newIndex = 0
+            if (currSongPos == songsAlreadyInQueue.length - 1) {
+                await TrackPlayer.skip(0)
 
-        let currSongPos = await TrackPlayer.getActiveTrackIndex()
+            } else {
+                await TrackPlayer.skipToNext();
+                newIndex += 1
+            }
+            await TrackPlayer.play();
 
-        if (currSongPos == songsAlreadyInQueue.length - 1) {
-            await TrackPlayer.skip(0)
+            let currSong = await TrackPlayer.getActiveTrack();
+            let nowState = await TrackPlayer.getPlaybackState()
 
-        } else {
-            await TrackPlayer.skipToNext();
+            dispatch(updateCurrentSongInfo({
+                artist: currSong?.artist,
+                artwork: currSong?.artwork,
+                title: currSong?.title,
+                id: currSong?.id,
+                playbackState: nowState.state,
+                url: currSong?.url
+            }))
+
+            dispatch(updateCurrentPlaylistInfo({
+                playlistName: prevPlaylistName,
+                songs: prevPlaylistInfo,
+                currSongIndex: newIndex
+            }))
+
+            dispatch(addToSystemPlaylist({ songInfo: currSong }))
+
+        } catch (error) {
+            console.log("song info error: ", error)
         }
-
-        let currSong = await TrackPlayer.getActiveTrack();
-        dispatch(updateCurrentSongInfo({
-            artistName: currSong?.artist,
-            artworkURL: currSong?.artwork,
-            songName: currSong?.title,
-            id: currSong?.id,
-            songState: "play",
-            url: currSong?.url
-        }))
-        await TrackPlayer.play();
-        dispatch(addToSystemPlaylist({ songInfo: currSong }))
-
 
     }
 
@@ -119,45 +165,48 @@ const SongInfo = (props: any) => {
 
         let currSongPos = await TrackPlayer.getActiveTrackIndex();
 
-        let currSongPlayState = await TrackPlayer.getProgress();
-        console.log("curr song state: ", currSongPlayState);
+        let newIndex = 0
         if (currSongPos == 0) {
             await TrackPlayer.seekTo(0);
             TrackPlayer.play();
         } else {
+            newIndex -= 1
             await TrackPlayer.skipToPrevious();
             let currSong = await TrackPlayer.getActiveTrack();
+
+            await TrackPlayer.play();
+
+            let songState = await TrackPlayer.getPlaybackState();
+
             dispatch(updateCurrentSongInfo({
-                artistName: currSong?.artist,
-                artworkURL: currSong?.artwork,
-                songName: currSong?.title,
+                artist: currSong?.artist,
+                artwork: currSong?.artwork,
+                title: currSong?.title,
                 id: currSong?.id,
-                songState: "play",
+                playbackState: songState.state,
                 url: currSong?.url
             }))
-            await TrackPlayer.play();
+
+            dispatch(updateCurrentPlaylistInfo({
+                playlistName: prevPlaylistName,
+                songs: prevPlaylistInfo,
+                currSongIndex: newIndex
+            }))
+
             dispatch(addToSystemPlaylist({ songInfo: currSong }))
         }
 
     }
 
-    const displayPlaylistsToAddTo = () => {
-
-    }
-
     const createPlaylist = () => {
-        // let existingPlaylists = playListData;
-
         let modifiedSongIfo = {
-            artist: currSongInfo.artistName,
-            artwork: currSongInfo.artworkURL,
+            artist: currSongInfo.artist,
+            artwork: currSongInfo.artwork,
             duration: 0,
             id: currSongInfo.id,
-            title: currSongInfo.songName,
+            title: currSongInfo.title,
             url: currSongInfo.url
         }
-
-        let lastIndex = allPlaylists.length
 
         let existingPlaylistNames = new Array();
         allPlaylists.map(
@@ -189,11 +238,11 @@ const SongInfo = (props: any) => {
     const addSongToThisPlaylist = (tobeAddedTo: any) => {
 
         let modifiedSongIfo = {
-            artist: currSongInfo.artistName,
-            artwork: currSongInfo.artworkURL,
+            artist: currSongInfo.artist,
+            artwork: currSongInfo.artwork,
             duration: 0,
             id: currSongInfo.id,
-            title: currSongInfo.songName,
+            title: currSongInfo.title,
             url: currSongInfo.url
         }
 
@@ -314,59 +363,26 @@ const SongInfo = (props: any) => {
                             </View>
                         </View>
 
-                        <View style={{
-                            // paddingLeft: "5%"
-                        }}>
-                            {/* <Text style={{
-                                color: "white"
-                            }}>{progress.duration.toString()}</Text>
-                            <Text style={{
-                                color: "white"
-                            }}>{progress.buffered.toString()}</Text>
-                            <Text style={{
-                                color: "white"
-                            }}>{progress.position.toString()}</Text>
-
-                            <Text style={{
-                                color: "white"
-                            }}>{(Dimensions.get("screen").width * 0.8).toString()}</Text>
-
-                            <Text style={{
-                                color: "white"
-                            }}>{(Dimensions.get("window").width * 0.8).toString()}</Text> */}
-
+                        <View>
                             <Slider
                                 maximumValue={Dimensions.get("window").width * 0.9}
                                 minimumValue={0}
                                 style={{ width: (Dimensions.get("window").width * 0.9), height: 20 }}
-                                // minimumTrackTintColor="#FFFFFF5D"
-                                // maximumTrackTintColor="#FFFFFF7D"
                                 value={(Number(progress.position * ((Dimensions.get("window").width * 0.9) / progress.duration))) || 0}
-                                minimumTrackTintColor = "#FFFFFF"
+                                minimumTrackTintColor="#FFFFFF"
                                 disabled
-
-
                             />
-
-
                         </View>
-
-
                     </View>
-
-
 
                     <View style={{
                         flex: 3,
                         alignContent: "center",
-                        // alignItems:"center",
-                        // justifyContent: "center",
                         flexDirection: "row",
                         justifyContent: "space-evenly",
                         alignItems: "center",
                         paddingVertical: "5%",
                     }}>
-
 
                         <View>
                             <View style={{
@@ -394,13 +410,15 @@ const SongInfo = (props: any) => {
                                     justifyContent: "center"
                                 }}>
                                     <Pressable onPress={() => playOrPauseSong()}>
-                                        {
-                                            (currentSongState == "play") ?
+                                        {/* {
+                                            (currentSongState == "playing") ?
                                                 <Icon name="pause" size={Dimensions.get("screen").height * 0.05} color="white" />
                                                 :
                                                 <Icon name="play" size={Dimensions.get("screen").height * 0.05} color="white" />
 
-                                        }
+                                        } */}
+
+                                        <Icon name={iconName} size={Dimensions.get("screen").height * 0.05} color="white" />
 
                                     </Pressable>
                                 </View>
@@ -413,72 +431,8 @@ const SongInfo = (props: any) => {
                                         <Icon name="play-skip-forward" size={Dimensions.get("screen").height * 0.04} color="#FFFFFF" />
                                     </TouchableHighlight>
                                 </View>
-
-
-
                             </View>
                         </View>
-
-
-                        {/* <View style={{
-                            height: Dimensions.get("screen").height * 0.25,
-                            width: Dimensions.get("screen").height * 0.25,
-                            borderRadius: Dimensions.get("screen").height * 0.25 * 0.5,
-                            // backgroundColor: "rgba(0,0,0,0.3)",
-                            alignContent: "center",
-                            alignItems: "center",
-                            alignSelf: "center",
-                            justifyContent: "center"
-                        }}>
-                            <View style={{
-                                position: "absolute",
-                                left: Dimensions.get("screen").height * 0.025
-                            }}>
-                                <Icon name="play-skip-back" size={Dimensions.get("screen").height * 0.04} color="#FFFFFF" />
-                            </View>
-                            <View style={{
-                                height: Dimensions.get("screen").height * 0.1,
-                                width: Dimensions.get("screen").height * 0.1,
-                                borderRadius: Dimensions.get("screen").height * 0.1 * 0.5,
-                                backgroundColor: "rgba(255,255,255,0.1)",
-                                alignContent: "center",
-                                alignItems: "center",
-                                alignSelf: "center",
-                                justifyContent: "center"
-                            }}>
-                                <View style={{
-                                    alignContent: "center",
-                                    alignItems: "center",
-                                    alignSelf: "center",
-                                    justifyContent: "center"
-                                }}>
-                                    <Pressable onPress={playThisSong} style={{
-                                        alignContent: "center",
-                                        alignItems: "center",
-                                        alignSelf: "center",
-                                        justifyContent: "center"
-                                    }}>
-                                        {
-                                            isPlaying ?
-                                                <Icon name="pause" size={30} color="#FFFFFF" />
-                                                :
-                                                <Icon name="play" size={Dimensions.get("screen").height * 0.05} color="white" />
-                                        }
-                                    </Pressable>
-                                </View>
-
-                            </View>
-                            <View style={{
-                                position: "absolute",
-                                right: Dimensions.get("screen").height * 0.025
-                            }}>
-                                <Icon name="play-skip-forward" size={Dimensions.get("screen").height * 0.04} color="#FFFFFF" />
-                            </View>
-
-                           
-
-                        </View> */}
-
                     </View>
                 </View>
             </View>
@@ -492,7 +446,6 @@ const SongInfo = (props: any) => {
                 <SafeAreaView style={{
                     width: "100%",
                     height: "100%",
-                    // justifyContent: "flex-end",
                     backgroundColor: "#002941"
 
                 }}>
@@ -504,12 +457,9 @@ const SongInfo = (props: any) => {
                     }} style={{
                         width: "100%",
                         height: "100%",
-                        // justifyContent: "flex-end",
-                        // backgroundColor: "#002941"
 
                     }}>
                         <View style={{
-                            // height: Dimensions.get("screen").height * 0.8,
                             width: "100%",
                             backgroundColor: "#0029417D",
                             alignSelf: "flex-end"
@@ -523,7 +473,6 @@ const SongInfo = (props: any) => {
                                     paddingVertical: "5%",
                                     alignContent: "center",
                                     alignItems: "center",
-                                    // justifyContent: "center",
                                     flexDirection: "row",
                                     borderWidth: 1,
                                     backgroundColor: "#0000003D"

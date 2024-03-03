@@ -1,8 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import userPlaylistReducer from './userPlaylistSlice'
-import playlistMetadataReducer from './playListMetaDataSlice'
 import currSongReducer from './currentSongSlice'
-import playlistWithSongsReducer from './playlistWithSongsSlice'
 import playlistsReducer from './playlistsSlice'
 import { persistStore, persistReducer } from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';

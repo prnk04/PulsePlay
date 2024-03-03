@@ -1,24 +1,26 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import Home from './Home';
 import Playlists from './Playlists';
 import Icon from 'react-native-vector-icons/Ionicons'
 import Discover from './Discover';
-import { Text, View } from 'react-native';
-import TrackPlayer from 'react-native-track-player';
-import { PlaybackService } from '../services/PlaybackService';
+import TrackPlayer, { Event, PlaybackActiveTrackChangedEvent } from 'react-native-track-player';
+import { updateCurrentPlaylistInfo, updateCurrentSongInfo } from '../reduxStore/currentSongSlice';
+import { addToSystemPlaylist } from '../reduxStore/playlistsSlice';
+import { useDispatch } from 'react-redux';
 
 const Tab = createBottomTabNavigator();
 
 const Main = () => {
 
+    
+
+
+
     return (
-        
+        <Tab.Navigator initialRouteName='Home' >
 
-        <Tab.Navigator initialRouteName='Home' sceneContainerStyle={{
-
-        }}>
             <Tab.Screen name="Home" component={Home} options={{
                 headerShown: false,
                 tabBarIcon: ({ focused }) => (focused ?
@@ -62,7 +64,6 @@ const Main = () => {
 
             <Tab.Screen name="My Playlists" component={Playlists} options={{
                 headerShown: false,
-
                 tabBarIcon: ({ focused }) => (focused ?
                     <Icon name="musical-note" size={25} color="rgba(255, 255, 255, 0.7)" />
                     :
@@ -82,10 +83,7 @@ const Main = () => {
 
             }} />
         </Tab.Navigator>
-        
-
     )
-
 }
 
 export default Main;

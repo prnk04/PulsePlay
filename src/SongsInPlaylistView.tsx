@@ -1,94 +1,89 @@
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useEffect } from 'react';
-import { Dimensions, FlatList, Image, ListRenderItemInfo, Pressable, SafeAreaView, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { Dimensions, FlatList, Image, Pressable, SafeAreaView, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useDispatch, useSelector } from 'react-redux';
-import { updateCurrentPlaylistInfo, updateCurrentSongInfo } from '../reduxStore/currentSongSlice';
-import { addToSystemPlaylist, getNumSongsInPlaylistWithId, getPlaylistDetailsWithId } from '../reduxStore/playlistsSlice';
+import { getNumSongsInPlaylistWithId, getPlaylistDetailsWithId } from '../reduxStore/playlistsSlice';
 import { RootState } from '../reduxStore/store';
 import { playThisSong } from '../services/SongsManipulation';
+import PlayPauseComponent from './PlayPauseComponent';
 import SongPlayingComponent from './SongPlayingComponent';
 
 const SongsInPlaylistView = (props: any) => {
 
-    const [currPlaylistName, setCurrPlaylistName] = React.useState('');
-    // const [numSongs, setNumSongs] = React.useState(0)
-
-    const numSongs = useSelector(getNumSongsInPlaylistWithId(props?.route?.params?.playlistId))
-
     const navigation = useNavigation<NativeStackNavigationProp<any>>();
-    const currentPlaylistName = useSelector((state: RootState) => state.currSong.currentPlaylistName)
-
 
     const dispatch = useDispatch();
-    
 
-    
-    const thisPlaylistData = useSelector(getPlaylistDetailsWithId(props?.route?.params?.playlistId))
+    const [currPlaylistName, setCurrPlaylistName] = React.useState('');
     const [allSongsInThisPlaylist, setAllSongsInThisPlaylist] = React.useState(new Array());
 
+    const numSongs = useSelector(getNumSongsInPlaylistWithId(props?.route?.params?.playlistId))
+    const currentPlaylistName = useSelector((state: RootState) => state.currSong.currentPlaylistName)
+    const thisPlaylistData = useSelector(getPlaylistDetailsWithId(props?.route?.params?.playlistId))
     const currentSongState = useSelector((state: RootState) => state.currSong.currentSongState)
-
-    const artworkURL = useSelector((state: RootState) => state.currSong.currSongInfo?.artworkURL)
-    const songName = useSelector((state: RootState) => state.currSong.currSongInfo?.songName)
-    const artistName = useSelector((state: RootState) => state.currSong.currSongInfo?.artistName)
     const songId = useSelector((state: RootState) => state.currSong.currSongInfo?.id)
-    const songURL = useSelector((state: RootState) => state.currSong.currSongInfo?.url)
 
 
     React.useLayoutEffect(() => {
-
+        
         setCurrPlaylistName(props?.route?.params?.playlistName)
-
         setAllSongsInThisPlaylist(thisPlaylistData?.songs)
+        
+    }, [props?.route?.params?.playlistName, thisPlaylistData?.songs])
 
-    }, [navigation])
 
     useEffect(() => {
         setAllSongsInThisPlaylist(thisPlaylistData?.songs)
-    })
+    }, [thisPlaylistData?.songs])
 
     const navigateToShowSongs = () => {
-        navigation.navigate("TrackListWithEdit", { playlistName: currPlaylistName, playlistId: props?.route?.params?.playlistId })
+        navigation.navigate("TrackListWithEdit", { playlistName: thisPlaylistData?.name, playlistId: props?.route?.params?.playlistId })
+    }
+
+    const navigateToTrackView = async (currSong: any, playlist: any, index: number, name: String) => {
+        
+        await playThisSong(currSong.url, currSong.artwork, currSong.artist, currSong.title, playlist, index, currentPlaylistName, name)
+
+        // dispatch(updateCurrentPlaylistInfo({
+        //     playlistName: name,
+        //     songs: playlist,
+        //     currSongIndex: index
+        // }))
+        // let playbackState = await TrackPlayer.getPlaybackState();
+
+        // dispatch(updateCurrentSongInfo({
+        //     artist: currSong?.artist,
+        //     artwork: currSong?.artwork,
+        //     title: currSong?.title,
+        //     id: currSong.id,
+        //     url: currSong?.url,
+        //     playbackState: playbackState.state
+        // }))
+
+        // dispatch(addToSystemPlaylist({ songInfo: currSong }))
+
+
+        navigation.navigate("SongInfo")
     }
 
     const RenderFlatlistData = (item: any) => {
+    
         return (
             <View style={{
                 paddingHorizontal: "5%",
                 paddingVertical: "2%"
             }}>
                 <TouchableHighlight
-                    onPress={() => {
-                        try {
-                            dispatch(updateCurrentSongInfo({
-                                artistName: item.item.artist,
-                                artworkURL: item.item.artwork,
-                                songName: item.item.title,
-                                id: item.item.id,
-                                songState: "play",
-                                url: item.item.url
-                            }))
-
-                            playThisSong(item.item.url, item.item.artwork, item.item.artist, item.item.title, allSongsInThisPlaylist, item.index, currPlaylistName, currentPlaylistName)
-
-                            navigation.navigate(
-                                "SongInfo"
-                            )
-
-                        } catch (error) {
-                            console.log("Move failed: ", error)
-                        }
-
+                    onPress={() => { 
+                        navigateToTrackView(item.item, thisPlaylistData?.songs, item.index, thisPlaylistData?.name)
                     }}
                 >
                     <View style={{
                         paddingVertical: "2%",
                         paddingHorizontal: "1%",
-                        // backgroundColor: "#0000005D",
                         borderRadius: 5,
-                        // height: Dimensions.get("screen").height * 0.1
                     }}>
                         <View style={{
                             flexDirection: "row",
@@ -119,66 +114,20 @@ const SongsInPlaylistView = (props: any) => {
                                 </View>
 
                                 <View>
-                                    <TouchableHighlight 
-                                    onPress={() => playOrPauseSong(item.item, item.index, currPlaylistName)}
-                                    >
-                                        {
-                                            (songId == item.item.id && currentSongState == "play") ?
-                                                <Icon name="pause-circle" size={Dimensions.get("screen").width * 0.08} color="#FFFFFF5D" />
-                                                :
-                                                <Icon name="play-circle" size={Dimensions.get("screen").width * 0.08} color="#FFFFFF5D" />
-
-                                        }
-                                    </TouchableHighlight>
-                                    {/* <Icon name="play-circle" size={Dimensions.get("screen").width * 0.08} color="#FFFFFF5D" /> */}
+                                <PlayPauseComponent
+                                        songInfo={item.item} playlistName={thisPlaylistData?.name} playlistInfo={thisPlaylistData?.songs}
+                                        songIndex={item.index} size={Dimensions.get("screen").width * 0.08} color="#FFFFFF5D"
+                                    />
                                 </View>
-
                             </View>
-
                         </View>
                     </View>
                 </TouchableHighlight>
-
             </View>
         )
     }
 
-    const playOrPauseSong = (currsong: any,  index: number, playlistName: string) => {
-        let currSongId = currsong.id;
-        console.log("songs in this playlist: ", allSongsInThisPlaylist)
-
-        if (songId == currSongId && currentSongState == "play") {
-            dispatch(updateCurrentSongInfo({
-                artistName: currsong.artist,
-                artworkURL: currsong.artwork,
-                songName: currsong.title,
-                id: currsong.id,
-                songState: "pause",
-                url: currsong.url
-            }))
-            dispatch(addToSystemPlaylist({ songInfo: currsong }))
-        }
-        else {
-
-            dispatch(updateCurrentSongInfo({
-                artistName: currsong.artist,
-                artworkURL: currsong.artwork,
-                songName: currsong.title,
-                id: currsong.id,
-                songState: "play",
-                url: currsong.url
-            }))
-        }
-
-        dispatch(updateCurrentPlaylistInfo({
-            playlistName: playlistName,
-            songs: allSongsInThisPlaylist,
-            currSongIndex: index
-        }))
-
-        playThisSong(currsong.url, currsong.artwork, currsong.artist, currsong.title, allSongsInThisPlaylist, index, currPlaylistName, currentPlaylistName)
-    }
-
+    
     return (
         <SafeAreaView style={{
             height: "100%",
@@ -190,9 +139,7 @@ const SongsInPlaylistView = (props: any) => {
                 flex: 1
             }}>
 
-
                 <View style={{
-                    // flex: 1,
                     paddingHorizontal: "5%"
                 }}>
                     <View style={{
@@ -215,8 +162,6 @@ const SongsInPlaylistView = (props: any) => {
                                 fontSize: 25,
                                 lineHeight: 35,
                                 fontFamily: "NotoSans-Medium",
-                                // textAlign: "center",
-                                // paddingVertical: "7%",
                                 paddingHorizontal: "10%"
                             }}>{currPlaylistName}</Text>
 
@@ -233,12 +178,12 @@ const SongsInPlaylistView = (props: any) => {
 
 
                 {
-                    (numSongs > 0) ? 
-                    <FlatList
-                    data = {allSongsInThisPlaylist}
-                    renderItem = {(item) => RenderFlatlistData(item)}
-                    />
-                    :
+                    (numSongs > 0) ?
+                        <FlatList
+                            data={allSongsInThisPlaylist}
+                            renderItem={(item) => RenderFlatlistData(item)}
+                        />
+                        :
                         <View style={{
                             height: "100%",
                             width: "100%"
@@ -252,9 +197,6 @@ const SongsInPlaylistView = (props: any) => {
                                     alignItems: "center",
                                     justifyContent: "center"
                                 }}>
-                                    {/* <Icon name="add" size={100} color="#FFFFFF" style={{
-                                    opacity: 0.5
-                                }} /> */}
                                     <Text style={{
                                         color: "#FFFFFF5D",
                                         fontSize: 30,
@@ -266,7 +208,6 @@ const SongsInPlaylistView = (props: any) => {
                                     }}>{`Add songs to this playlist`}</Text>
                                 </View>
                             </TouchableHighlight>
-
                         </View>
                 }
 

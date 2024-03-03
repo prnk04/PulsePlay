@@ -1,12 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
+import TrackPlayer, { State } from 'react-native-track-player';
 
 const initialState = {
     currSongInfo: {
-        artistName: "",
-        artworkURL: "",
-        songName: "",
+        artist: "",
+        artwork: "",
+        title: "",
         id: -1,
-        url: ""
+        url: "",
+        album: ""
     },
     currentSongState: "",
     recentlyPlayedSongsInfo: new Array(),
@@ -25,44 +27,46 @@ export const currentSongSlice = createSlice({
     reducers: {
 
         updateCurrentSongInfo: (state, action) => {
-            // state.currSongInfo = action.payload.currSongInfo;
-            state.currSongInfo.artistName = action.payload.artistName;
-            state.currSongInfo.artworkURL = action.payload.artworkURL;
-            state.currSongInfo.songName = action.payload.songName;
+            // state.currSongInfo = action.payload.currSongInfo
+            state.currSongInfo.artist = action.payload.artist;
+            state.currSongInfo.artwork = action.payload.artwork;
+            state.currSongInfo.title = action.payload.title;
             state.currSongInfo.id = action.payload.id;
             state.currSongInfo.url = action.payload.url;
+            // state.currentSongState = action.payload.playbackState;
+            state.currSongInfo.album = action.payload.album;
+        },
 
-            state.currentSongState = action.payload.songState;
+        updatePlaybackState: (state, action) => {
+            state.currentSongState = action.payload.playbackState
         },
 
         updateCurrentPlaylistInfo: (state, action) => {
-        //     state.currPlaylistInfo.name = action.payload.playlistName,
-        //     state.currPlaylistInfo.songs = action.payload.songs,
-        //     state.currPlaylistInfo.currPlayingSongIndex = action.payload.currSongIndex
-        // },
-        state.currentPlaylistName = action.payload
+            state.currPlaylistInfo.name = action.payload.playlistName
+            state.currPlaylistInfo.songs = action.payload.songs
+            state.currPlaylistInfo.currPlayingSongIndex = action.payload.currSongIndex
+
+            state.currentPlaylistName = action.payload.playlistName
         },
 
         addToRecentlyPlayed: (state, action) => {
             let x = state.recentlyPlayedSongsInfo
 
             let tempVar = {
-                artistName : action.payload.artistName,
-                artworkURL : action.payload.artworkURL,
-                songName : action.payload.songName,
-                id : action.payload.id,
+                artistName: action.payload.artistName,
+                artworkURL: action.payload.artworkURL,
+                songName: action.payload.songName,
+                id: action.payload.id,
                 url: action.payload.url
             }
-            
-            
 
             x.push(tempVar)
         }
-        
+
     }
 
 })
 
-export const {updateCurrentSongInfo, addToRecentlyPlayed, updateCurrentPlaylistInfo } = currentSongSlice.actions
+export const { updateCurrentSongInfo, addToRecentlyPlayed, updateCurrentPlaylistInfo, updatePlaybackState } = currentSongSlice.actions
 
 export default currentSongSlice.reducer

@@ -13,21 +13,9 @@ const playThisSong = async (songURL: string, artworkURL: string, artistName: str
 
 
     const playbackState = await TrackPlayer.getPlaybackState();
-
-
-    // console.log("what is the state of the track player: ", trackPlayerState)
+    
 
     if (playbackState.state == State.None) {
-
-        // TrackPlayer.load({
-        //     url: songURL,
-        //     artwork: artworkURL,
-        //     artist: artistName,
-        //     title: songName,
-        // })
-        // await TrackPlayer.play();
-
-        console.log("On function we got: ", playlistSongs)
         TrackPlayer.add(playlistSongs);
         TrackPlayer.skip(index);
         TrackPlayer.play();
@@ -41,12 +29,6 @@ const playThisSong = async (songURL: string, artworkURL: string, artistName: str
         if (currSongInfo?.url == songURL && prevPlaylistName == currentPlaylistName) {
                 await TrackPlayer.pause()
         } else {
-            // TrackPlayer.load({
-            //     url: songURL,
-            //     artwork: artworkURL,
-            //     artist: artistName,
-            //     title: songName,
-            // })
             await TrackPlayer.reset();
             await TrackPlayer.add(playlistSongs);
             await TrackPlayer.skip(index);
@@ -62,25 +44,15 @@ const playThisSong = async (songURL: string, artworkURL: string, artistName: str
             await TrackPlayer.play();
         }
         else {
-            // TrackPlayer.load({
-            //     url: songURL,
-            //     artwork: artworkURL,
-            //     artist: artistName,
-            //     title: songName,
-            // })
             await TrackPlayer.reset();
             await TrackPlayer.add(playlistSongs);
             await TrackPlayer.skip(index);
             await TrackPlayer.play();
         }
-
-
     }
 
     else if (playbackState.state == State.Ended) {
-        console.log("song ended");
         await TrackPlayer.play();
-        console.log("now going to play")
     }
 
 }
@@ -107,7 +79,7 @@ const playPreviousSong = async() => {
     let currSongPos = await TrackPlayer.getActiveTrackIndex();
 
     let currSongPlayState = await TrackPlayer.getProgress();
-    console.log("curr song state: ", currSongPlayState);
+    
     if (currSongPlayState.position > 1 || currSongPos == 0) {
         await TrackPlayer.seekTo(0);
         TrackPlayer.play();

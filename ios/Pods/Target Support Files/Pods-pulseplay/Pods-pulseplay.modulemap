@@ -1,0 +1,6 @@
+module Pods_pulseplay {
+  umbrella header "Pods-pulseplay-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -54,24 +54,12 @@ export const playlistsSlice = createSlice({
         },
 
         addSingleSongToPlaylist: (state, action) => {
-            /**
-             * payload: {
-             * playlistName: "",
-             * playlistId: 0,
-             * songInfo: {
-             * id: 0,
-             * duration: 0...
-             * }
-             * }
-             * 
-             */
-            // let playlistToBeAddedToId = action.payload.playlistId;
+            
             let playlistToBeAddedToName = action.payload.playlistName;
             let songToBeAddedTo = action.payload.songInfo;
 
             state.playlistMetaData.playlistsData.map(
                 (a) => {
-                    console.log("a.name os: ", a.name, " and pla: ", playlistToBeAddedToName)
                     if (a.name == playlistToBeAddedToName) {
                         a.totalNumberOfSongs += 1
                         a.songsId.splice(0, 0, songToBeAddedTo.id)
@@ -80,15 +68,6 @@ export const playlistsSlice = createSlice({
 
                         return
                     }
-                }
-            )
-
-            console.log("State post adding single song to playlist: " )
-            state.playlistMetaData.playlistsData.map(
-                (a) => {
-                    console.log("------------------------")
-                    console.log(a.name)
-                    console.log(a.songs)
                 }
             )
         },
@@ -130,16 +109,21 @@ export const playlistsSlice = createSlice({
         },
 
         addToSystemPlaylist: (state, action) => {
+            try {
             const songToBeAdded = action.payload.songInfo;
 
             state.recentlyPlayedSongs.totalSongs += 1
-            if (!state.recentlyPlayedSongs.songs.find((a) => {return a?.id == songToBeAdded.id}))
+            if (!state.recentlyPlayedSongs.songs.find((a) => {
+                return a?.url == songToBeAdded.url}))
             state.recentlyPlayedSongs.songs.splice(0, 0, songToBeAdded)
 
             if (state.recentlyPlayedSongs.songs.length > 9) {
                 state.recentlyPlayedSongs.songs.splice(9, 1)
             }
             state.recentlyPlayedSongs.totalSongs = state.recentlyPlayedSongs.songs.length
+        } catch (error) {
+                console.log("Error in adding to syatem playlist: ", error)
+        }
         }
     }
 })
